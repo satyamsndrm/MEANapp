@@ -1,0 +1,21 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "Api apps",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.245.1",
+    "body-parser": "*",
+    "cors": "^2.8.4",
+    "express": "*",
+    "nodemon": "^1.17.5",
+    "passport": "*",
+    "passport-jwt": "*"
+  },
+  "author": "Satyam",
+  "license": "ISC"
+}
