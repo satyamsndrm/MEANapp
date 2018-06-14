@@ -1,13 +1,22 @@
-<form (submit) = "synthesizeMySpeech()">
+<form (submit)="synthesizeMySpeech()">
   <div class="form-group">
     <label>Voice String</label>
     <input type="text" [(ngModel)] = 'textVoice' name = 'textVoice' class="form-control">
   </div>
   <div class="form-group">
-    <label >Voice Code</label>
-    <input type="text" [(ngModel)] = 'VoiceId' name = 'VoiceId' class="form-control" >
+    <label>VoiceId</label>
+    <select [(ngModel)] = 'VoiceId' name = 'VoiceId' class="form-control" >
+    	<option *ngFor="let x of voicelist" value="{{x.Id}}">{{x.LanguageName + '(' + x.Name + ')'}}</option>
+	</select>
   </div>
-  <input type="submit" class="btn btn-primary " name="Submit">
+  <input type="submit" class="btn btn-primary " name="Submit" value="Submit">
 </form>
-
+<!--
 <div>{{datas}}</div>
+<img src="favicon.ico">
+-->
+<div>{{VoiceId}}</div>
+<div>{{textVoice}}</div>
+<audio controls>
+  <source src="{{mp3Source}}" type="audio/mpeg">
+</audio>

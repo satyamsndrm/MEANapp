@@ -9,21 +9,41 @@ import { AuthService } from '../../services/auth.service';
 export class PollyComponent implements OnInit {
 	textVoice : String;
 	VoiceId : String;
-	datas : Object;
+	mp3Source : String;
+	voicelist : Array;
+	param: Object;
 
-	constructor(private authService : AuthService) { }
+	constructor(private authService : AuthService) {
+		this.voicelist=[{
+			Id: 'Raveena',
+			LanguageName:'Eng',
+			Name:'sdf'
+		}]
+		this.mp3Source = "audiosrc.mp3";
+	 }
 
 	ngOnInit() {
+	/*
+		this.authService.getVoices().subscribe(d => {
+			console.log(d.datas.Voices);
+			this.voicelist=d.datas.Voices;
+			console.log(this.voicelist);
+
+		});
+	*/
 	}
 	synthesizeMySpeech(){
-		let	params ={
+
+		this.param ={
 			text: this.textVoice,
-			id: this.VoiceId
+			voiceid: this.VoiceId
 		};
 		if(this.textVoice && this.VoiceId){
-			this.authService.synthesizeSpeech(params).subscribe(data => { data = this.datas=data		});
+			this.authService.synthesizeSpeech(this.param).subscribe(data => { 
+				console.log(data);
+				this.mp3Source = data.src;
+			});
 		}
-		console.log(params);
 		return false;
 	}
 
