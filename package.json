@@ -8,12 +8,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "body-parser": "*",
-    "cors": "^2.8.4",
-    "express": "*",
-    "nodemon": "^1.17.5",
-    "passport": "*",
-    "passport-jwt": "*"
   },
   "author": "Satyam",
   "license": "ISC"
