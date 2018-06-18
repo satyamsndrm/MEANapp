@@ -4,8 +4,7 @@
 Amazon Web Services'Api uses:-\
 
 ## Installation
-This site is made with [Jekyll]. Once you've got [Ruby] on your computer, you
-can run:
+This site is made with [Nodejs].
 
 ```sh
 npm install aws-sdk
