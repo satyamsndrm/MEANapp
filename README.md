@@ -3,11 +3,16 @@
 
 Amazon Web Services'Api uses:-\
 
-Install these dependencies:-
-"aws-sdk": "^2.245.1",
-    "body-parser": "*",
-    "cors": "^2.8.4",
-    "express": "*",
-    "nodemon": "^1.17.5",
-    "passport": "*",
-    "passport-jwt": "*"
+## Installation
+This site is made with [Jekyll]. Once you've got [Ruby] on your computer, you
+can run:
+
+```sh
+npm install aws-sdk
+npm install cors
+npm install body-parser
+npm install express
+npm install passport
+npm install passport-jwt
+```
+
